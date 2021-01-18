@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E65322A3-6B06-49F7-AC71-4616A3BDFAEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Entidades</RootNamespace>
+    <AssemblyName>Entidades</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="General\clsTurnoHorario.cs" />
+    <Compile Include="General\Conection.cs" />
+    <Compile Include="General\clsAusencia.cs" />
+    <Compile Include="General\clsDeduccion.cs" />
+    <Compile Include="General\clsHorasCondiciones.cs" />
+    <Compile Include="General\clsLicencia.cs" />
+    <Compile Include="General\clsMovimiento.cs" />
+    <Compile Include="General\clsOtraIncidencia.cs" />
+    <Compile Include="General\clsRetencion.cs" />
+    <Compile Include="General\clsSubsidios.cs" />
+    <Compile Include="General\clsTiempoTrabajo.cs" />
+    <Compile Include="General\clsVacaciones.cs" />
+    <Compile Include="General\clsCargo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="General\clsRiesgo.cs" />
+    <Compile Include="General\clsCondicionLaboral.cs" />
+    <Compile Include="General\clsCompetencias.cs" />
+    <Compile Include="General\clsCondicionesAnormales.cs" />
+    <Compile Include="General\clsUnidadesOrganizativas.cs" />
+    <Compile Include="General\clsHorario.cs" />
+    <Compile Include="General\clsCicloHorario.cs" />
+    <Compile Include="Rpt\clsAusencias.cs" />
+    <Compile Include="Rpt\clsDatosNomina.cs" />
+    <Compile Include="Rpt\clsLicencias.cs" />
+    <Compile Include="Rpt\clsSubsidios.cs" />
+    <Compile Include="Rpt\clsVacaciones.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Net4Sage.DataAccessModel;
+using Net4Sage;
+using System.Windows.Forms;
+
+
+
+namespace RHSMP001
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main(params string[] args)
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            SageSession session = new SageSession(args);
+            Application.Run(new frmEmpleados(ref session));
+        }
+    }
+}

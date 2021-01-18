@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1D1BDC9E-7D0C-4242-8D60-AF544998D19C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RHSMC001</RootNamespace>
+    <AssemblyName>RHSMC001</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Net4Sage">
+      <HintPath>D:\Proyecto Sage\SDK\Net4Sage.dll</HintPath>
+    </Reference>
+    <Reference Include="Net4Sage.CIUtils">
+      <HintPath>D:\Proyecto Sage\SDK\Net4Sage.CIUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Net4Sage.GLUtils">
+      <HintPath>D:\Proyecto Sage\SDK\Net4Sage.GLUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Net4Sage.MFUtils">
+      <HintPath>D:\Proyecto Sage\SDK\Net4Sage.MFUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="Net4Sage.ModuleUtils.DataAccessModel">
+      <HintPath>D:\Proyecto Sage\SDK\Net4Sage.ModuleUtils.DataAccessModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Net4Sage.SOUtils">
+      <HintPath>D:\Proyecto Sage\SDK\Net4Sage.SOUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCargo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCargo.Designer.cs">
+      <DependentUpon>frmCargo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompetencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompetencia.Designer.cs">
+      <DependentUpon>frmCompetencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRiesgos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRiesgos.Designer.cs">
+      <DependentUpon>frmRiesgos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCargo.resx">
+      <DependentUpon>frmCargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompetencia.resx">
+      <DependentUpon>frmCompetencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRiesgos.resx">
+      <DependentUpon>frmRiesgos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{e65322a3-6b06-49f7-ac71-4616a3bdfaef}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{a10dffc0-61fe-43af-aa4c-29af017e3428}</Project>
+      <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RHSGTTT001\RHSGTTT001.csproj">
+      <Project>{3F485757-CEBA-4005-8016-9CBC8D4DD35D}</Project>
+      <Name>RHSGTTT001</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RHSMCL001\RHSMCL001.csproj">
+      <Project>{597d677f-4d95-4b7d-bb37-1cfbd8f995b8}</Project>
+      <Name>RHSMCL001</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RHSMCP001\RHSMCP001.csproj">
+      <Project>{66C6D6DC-861C-4A41-9DAE-05EF01CDA8A0}</Project>
+      <Name>RHSMCP001</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RHSMR001\RHSMR001.csproj">
+      <Project>{DA2BCE81-4B3B-43CF-BEB6-40431209C121}</Project>
+      <Name>RHSMR001</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RRHH.Datamodel\RRHH.Datamodel.csproj">
+      <Project>{7a65a367-881f-4922-89d5-bfdf4dd2400f}</Project>
+      <Name>RRHH.Datamodel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objetos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
