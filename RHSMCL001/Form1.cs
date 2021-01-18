@@ -23,6 +23,8 @@ namespace RHSMCL001
             this.sageSession1.InitializeSession(session);
             LoadContext();
             CargarDatosIniciales();
+
+
         }
         public void LoadContext()
         {
